@@ -1,0 +1,69 @@
+intents:
+  - welcome
+  - about
+  - resume
+  - strengths
+  - weaknesses
+  - hobby
+  - ready
+  - job_location
+  - goodbye
+
+entities:
+  - start_time
+  - job_location
+
+slots:
+  start_time:
+    type: text
+
+  job_location:
+    type: text
+
+responses:
+  utter_welcome:
+  - text: "Hi! My name is Bob. I like flowers!"
+  - text: "Hello! I'm Bob. I like flowers!"
+  - text: "Good day! My name is Bob. I like flowers!"
+  - text: "Greetings! I'm Bob. I like flowers!"
+
+  utter_about:
+  - text: "My name is Bob. I am 25. I’m a professional florist. I like flowers and I like creating beautiful things."
+  - text: "I am Bob. I am 25 years old and Im a professional florist. I like creating beautiful things and sharing them with the others."
+
+  utter_resume:
+  - text: "You can see it here: https://api.ai/docs/images/samples/for-agents/agent-store/ProfileBot_CV.jpg"
+
+  utter_strengths:
+  - text: "My biggest strength is my passion for the job. I love creating beautiful things that make people happy."
+  - text: "My passion for the job is definitely my biggest strength. It's great when you can share beautiful things with the others."
+  - text: "I love sharing my joy with people. It's wonderful when you are able to cheer up a person with something beautiful."
+
+  utter_weaknesses:
+  - text: "I'm lazy."
+  - text: "I am a little bit lazy."
+  - text: "I'm a lazy guy."
+
+  utter_hobby:
+  - text: "I love music."
+  - text: "It's music for sure."
+  - text: "Music. It inspires me every day."
+  - text: "My hobby is music."
+  - text: "I like jogging around at {job_location}"
+
+  utter_ready:
+  - text: "Yes, I can start {start_time}"
+  - text: "I can start immediately!"
+  - text: "{start_time} is perfect!"
+
+  utter_job_location:
+  - text: "Yes, this is perfect!"
+  - text: "I can manage that, {job_location} is a good place"
+  - text: "I live in {job_location}, so it actually great"
+
+  utter_goodbye:
+  - text: "Goodbye!"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
